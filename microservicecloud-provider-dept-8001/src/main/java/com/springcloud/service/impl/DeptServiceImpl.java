@@ -1,8 +1,8 @@
 package com.springcloud.service.impl;
 
-import com.atguigu.springcloud.dao.DeptDao;
-import com.atguigu.springcloud.entities.Dept;
-import com.atguigu.springcloud.service.DeptService;
+import com.springcloud.dao.DeptDao;
+import com.springcloud.entities.Dept;
+import com.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
