@@ -12,6 +12,7 @@
         <module>microservicecloud-api</module>
         <module>microservicecloud-provider-dept-8001</module>
         <module>microservicecloud-eureka-7001</module>
+        <module>microservicecloud-consumer-dept-80</module>
     </modules>
 
     <properties>
@@ -87,7 +88,7 @@
                 <artifactId>maven-resources-plugin</artifactId>
                 <configuration>
                     <delimiters>
-                        <delimit>$</delimit>
+                        <delimiter>$</delimiter>
                     </delimiters>
                 </configuration>
             </plugin>
