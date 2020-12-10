@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
-import rules.SelfRoudomRule;
+import rules.SelfRandomRule;
 
 /**
  * @Author mrliz
@@ -12,7 +12,7 @@ import rules.SelfRoudomRule;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@RibbonClient(name = "MICROSERVICECLOUD-DEPT",configuration = SelfRoudomRule.class)
+@RibbonClient(name = "MICROSERVICECLOUD-DEPT",configuration = SelfRandomRule.class)
 public class DeptConsumer80_App {
 
     public static void main(String[] args) {
