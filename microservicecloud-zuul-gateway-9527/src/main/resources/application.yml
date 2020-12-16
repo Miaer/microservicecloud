@@ -12,3 +12,19 @@ eureka:
   instance:
     instance-id: gateway-9527.com
     prefer-ip-address: true
+
+zuul:
+
+# 不让用这个名称进行访问
+#  ignored-services: "microservicecloud-dept"
+
+# 只能使用指定的名称访问，所有的微服务名称都不让用
+  ignored-services: "*"
+
+# 统一前缀
+  prefix: /test
+
+  # 路由配置,采用key、value的形式，key是要访问的微服务名称；value为替换后的访问规则
+  routes:
+    mydepttest.serviceId: microservicecloud-dept
+    mydepttest.path: /mydepttest/**
