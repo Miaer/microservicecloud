@@ -8,6 +8,8 @@ import com.netflix.loadbalancer.Server;
 import java.util.List;
 
 /**
+ * 自定义Ribbon的负载均衡算法配置类
+ * 注意：该类不可再主应用程序上下文的@ComponentScan所扫描的包中！！！
  * @Author mrliz
  * @Date 2020/12/10 23:53
  * 参考随机数的源码来修改
