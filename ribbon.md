@@ -1,5 +1,5 @@
 # Ribbon
-Ribbon是Netflix发布的**客户端**的负载均衡(调用方选择如何负载均衡，还分为硬件的负载均衡和服务器端的负载均衡)
+Ribbon是Netflix发布的**客户端**的负载均衡(调用方选择如何负载均衡，还分为硬件的负载均衡-LVS 和服务器端的负载均衡-Nginx、HAProxy)
 
 Ribbon与Eureka配合使用时，Ribbon可自动从EurekaServer获取服务提供者地址列表，并基于负载均衡算法，请求其中一个服务提供者实例。
 ![blockchain](images\ribbon和eureka架构.png)
@@ -51,3 +51,26 @@ Ribbon与Eureka配合使用时，Ribbon可自动从EurekaServer获取服务提�
     ribbon:
         NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 
+# 项目负载均衡情况
+![blockchain](images\ribbon负载均衡.png)
+
+# 负载均衡
+load balance 负载均衡是在用于解决一台机器无法处理所有请求时产生的一种算法。
+
+使用负载均衡带来的好处很明显：
+
+- 当集群里的1台或者多台服务器down的时候，剩余的没有down的服务器可以保证服务的继续使用
+- 使用了更多的机器保证了机器的良性使用，不会由于某一高峰时刻导致系统cpu急剧上升
+
+负载均衡有好几种实现策略，常见的有：
+
+- 随机 (Random)
+- 轮询 (RoundRobin)
+- 一致性哈希 (ConsistentHash)
+- 哈希 (Hash)
+- 加权（Weighted）
+
+# ribbon的负载均衡
+
+## ILoadBalance 负载均衡器
+ribbon是一个为客户端提供负载均衡功能的服务，它内部提供了一个叫做ILoadBalance的接口代表负载均衡器的操作，比如有添加服务器操作、选择服务器操作、获取所有的服务器列表、获取可用的服务器列表等等。ILoadBalance的继承关系如下：
