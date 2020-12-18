@@ -1,5 +1,5 @@
 # Ribbon
-Ribbon是Netflix发布的**客户端**的负载均衡
+Ribbon是Netflix发布的**客户端**的负载均衡(调用方选择如何负载均衡，还分为硬件的负载均衡和服务器端的负载均衡)
 
 Ribbon与Eureka配合使用时，Ribbon可自动从EurekaServer获取服务提供者地址列表，并基于负载均衡算法，请求其中一个服务提供者实例。
 ![blockchain](images\ribbon和eureka架构.png)
@@ -50,3 +50,4 @@ Ribbon与Eureka配合使用时，Ribbon可自动从EurekaServer获取服务提�
 
     ribbon:
         NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
