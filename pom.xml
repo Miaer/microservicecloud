@@ -20,6 +20,9 @@
         <module>microservicecloud-consumer-dept-feign</module>
         <module>microservicecloud-provider-dept-hystrix-8001</module>
         <module>microservicecloud-zuul-gateway-9527</module>
+        <module>microservicecloud-nacos-8848</module>
+        <module>microservicecloud-nacos-8849</module>
+        <module>microservicecloud-nacos-8850</module>
     </modules>
 
     <properties>
