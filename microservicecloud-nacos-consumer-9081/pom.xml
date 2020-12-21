@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservicecloud-consumer-nacos-9081</artifactId>
+    <artifactId>microservicecloud-nacos-consumer-9081</artifactId>
 
     <dependencies>
         <dependency>
