@@ -22,7 +22,6 @@
         <module>microservicecloud-zuul-gateway-9527</module>
         <module>microservicecloud-nacos-consumer-9081</module>
         <module>microservicecloud-nacos-provider-8081</module>
-        <module>microservicecloud-nacos-8850</module>
     </modules>
 
     <properties>
