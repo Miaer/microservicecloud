@@ -1,0 +1,16 @@
+# 网关名称
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      # 路由策略
+      routes:
+        - id: cloudroute
+          # 转发地址
+          uri: http://www.baidu.com/
+          # 匹配规则
+          predicates:
+            - Path=/mayikt/**
+# HTTP和HTTPS URI默认端口设置是80和443。
+# 访问127.0.0.1/route 帮助我们跳转到uri的地址 完成转发功能
