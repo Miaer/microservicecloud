@@ -1,16 +1,87 @@
-# 网关名称
+# 路径配置路由规则
+# 参考https://docs.spring.io/spring-cloud-gateway/docs/2.2.6.RELEASE/reference/html/#configuring-route-predicate-factories-and-gateway-filter-factories
 spring:
-  application:
-    name: cloud-gateway
   cloud:
     gateway:
-      # 路由策略
       routes:
-        - id: cloudroute
-          # 转发地址
-          uri: http://www.baidu.com/
-          # 匹配规则
+
+        # 某个时间段之后的请求。注意After参数
+        - id: after_route
+          uri: https://example.org
           predicates:
-            - Path=/mayikt/**
-# HTTP和HTTPS URI默认端口设置是80和443。
-# 访问127.0.0.1/route 帮助我们跳转到uri的地址 完成转发功能
+            - After=2017-01-20T17:42:47.789-07:00[America/Denver]
+
+        # 某个时间之前的请求
+        - id: before_route
+          uri: https://example.org
+          predicates:
+            - Before=2017-01-20T17:42:47.789-07:00[America/Denver]
+
+        # 某个时间区间
+        - id: between_route
+            uri: https://example.org
+            predicates:
+              - Between=2017-01-20T17:42:47.789-07:00[America/Denver], 2017-01-21T17:42:47.789-07:00[America/Denver]
+
+        # 按照Cookie进行匹配
+        - id: cookie_route
+          uri: https://example.org
+          predicates:
+            - Cookie=chocolate, ch.p
+
+        # 按照请求头进行匹配
+        - id: header_route
+            uri: https://example.org
+            predicates:
+              - Header=X-Request-Id, \d+
+
+        # 按照主机名来匹配
+        - id: host_route
+            uri: https://example.org
+            predicates:
+              - Host=**.somehost.org,**.anotherhost.org
+
+        # HTTP方法来匹配
+        - id: method_route
+            uri: https://example.org
+            predicates:
+              - Method=GET,POST
+
+        # 路径匹配
+        - id: path_route
+            uri: https://example.org
+            predicates:
+              - Path=/red/{segment},/blue/{segment}
+
+        # 根据查询参数进行匹配，如果请求包含green查询参数，则前面的路由匹配
+        - id: query_route
+            uri: https://example.org
+            predicates:
+              - Query=green
+
+        # 如果请求包含一个前述路线匹配red，其值相匹配的查询参数gree.的regexp，所以green和greet将匹配
+        - id: query_route
+            uri: https://example.org
+            predicates:
+              - Query=red, gree.
+
+        # 如果请求的远程地址为192.168.1.1，则此路由匹配
+        - id: remoteaddr_route
+            uri: https://example.org
+            predicates:
+              - RemoteAddr=192.168.1.1/24
+
+        # 权重路由配置
+        # 这条配置会将大约80％的流量转发到weighthigh.org，将大约20％的流量转发到weightlow.org。
+        - id: weight_high
+            uri: https://weighthigh.org
+            predicates:
+              - Weight=group1, 8
+
+        - id: weight_low
+            uri: https://weightlow.org
+            predicates:
+              - Weight=group1, 2
+
+      # 是否启动网关
+      enabled: true
