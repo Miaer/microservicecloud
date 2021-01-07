@@ -1,0 +1,59 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+.idea/
+microservicecloud-api/microservicecloud-api.iml
+microservicecloud-api/target/
+microservicecloud-consumer-dept-80/microservicecloud-consumer-dept-80.iml
+microservicecloud-consumer-dept-80/target/
+microservicecloud-consumer-dept-feign/microservicecloud-consumer-dept-feign.iml
+microservicecloud-consumer-dept-feign/target/
+microservicecloud-eureka-7001/microservicecloud-eureka-7001.iml
+microservicecloud-eureka-7001/target/
+microservicecloud-eureka-7002/microservicecloud-eureka-7002.iml
+microservicecloud-eureka-7002/target/
+microservicecloud-eureka-7003/microservicecloud-eureka-7003.iml
+microservicecloud-eureka-7003/target/
+microservicecloud-nacos-consumer-9081/microservicecloud-nacos-consumer-9081.iml
+microservicecloud-nacos-consumer-9081/target/classes/com/
+microservicecloud-nacos-consumer-9081/target/generated-sources/
+microservicecloud-nacos-provider-8081/microservicecloud-nacos-provider-8081.iml
+microservicecloud-nacos-provider-8081/target/classes/com/
+microservicecloud-nacos-provider-8081/target/generated-sources/
+microservicecloud-provider-dept-8001/microservicecloud-provider-dept-8001.iml
+microservicecloud-provider-dept-8001/target/
+microservicecloud-provider-dept-8002/microservicecloud-provider-dept-8002.iml
+microservicecloud-provider-dept-8002/target/
+microservicecloud-provider-dept-8003/microservicecloud-provider-dept-8003.iml
+microservicecloud-provider-dept-8003/target/
+microservicecloud-provider-dept-hystrix-8001/microservicecloud-provider-dept-hystrix-8001.iml
+microservicecloud-provider-dept-hystrix-8001/target/
+microservicecloud-springcloud-gateway/microservicecloud-springcloud-gateway.iml
+microservicecloud-springcloud-gateway/target/classes/META-INF/
+microservicecloud-springcloud-gateway/target/classes/application.yml
+microservicecloud-springcloud-gateway/target/classes/bootstrap.properties
+microservicecloud-springcloud-gateway/target/generated-sources/
+microservicecloud-springcloud-gateway/target/generated-test-sources/
+microservicecloud-zuul-gateway-9527/microservicecloud-zuul-gateway-9527.iml
+microservicecloud-zuul-gateway-9527/target/
+microservicecloud.iml
