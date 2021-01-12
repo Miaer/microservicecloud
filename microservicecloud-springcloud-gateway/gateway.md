@@ -31,3 +31,8 @@ Spring Cloud Gate基于Spring Boot 2.x， Spring WebFlux和项目Reactor 构建�
 * Filter由虚线分隔的原因是:Filter可以在发送*代理请求之前或之后执行逻辑*。执行所有“前置”过滤器逻辑，然后发出代理请求。发出代理请求后，将执行“后”过滤器逻辑。
 
 * 在没有端口的路由中定义的URI将分别将HTTP和HTTPS URI的默认端口分别设置为80和443。
+
+# 配置谓词
+前文说了，路由route是由ID，目标URI，谓词集合和过滤器集合组成。
+
+# 配置过滤器
