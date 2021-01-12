@@ -24,5 +24,6 @@ Spring Cloud Gate基于Spring Boot 2.x， Spring WebFlux和项目Reactor 构建�
 
 # 工作原理
 ![blockchain](..\images\springCloudGateway原理.png)
+https://github.com/ZeganLi/microservicecloud/blob/master/images/springCloudGateway%E5%8E%9F%E7%90%86.png
 
 客户端向Spring Cloud网关发出请求。如果网关处理程序映射确定请求与路由匹配，则将其发送到网关Web处理程序。该处理程序运行通过特定于请求的筛选器链发送请求。筛选器由虚线分隔的原因是，筛选器可以在发送代理请求之前或之后执行逻辑。执行所有“前置”过滤器逻辑，然后发出代理请求。发出代理请求后，将执行“后”过滤器逻辑。
