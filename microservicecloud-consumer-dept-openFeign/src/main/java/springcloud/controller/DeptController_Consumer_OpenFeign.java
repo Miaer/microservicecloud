@@ -14,7 +14,7 @@ import java.util.List;
  * @Date 2020/12/9 21:26
  */
 @RestController
-public class DeptController_Consumer_Feign {
+public class DeptController_Consumer_OpenFeign {
 
     @Autowired
     private DeptClientService service;
