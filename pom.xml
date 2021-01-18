@@ -23,6 +23,7 @@
         <module>microservicecloud-nacos-consumer-9081</module>
         <module>microservicecloud-nacos-provider-8081</module>
         <module>microservicecloud-sentinel-10001</module>
+        <module>microservicecloud-consumer-dept-openFeign</module>
     </modules>
 
     <properties>
